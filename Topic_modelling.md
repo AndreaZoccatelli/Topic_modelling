@@ -23,10 +23,10 @@ options(warn = defaultW)
 ### 1 API request
 
 ``` r
-api_key <- "kcrkqTWQ6piaQugATqOEsg7ZW"
-api_secret_key <- "KwX8hmYLdxpoXRMDv9yK6uluJPCMFOxgOSZFoJSTKTdOwLCKQq"
-access_token <- "1051850979661021184-1hynI2jXn7Umy2HP0sZBi4gaDQzuBt"
-access_token_secret <- "zfRVgeDqHQUDwn26ojLTzk7QHA59qpQqF17rGQVvi6Q2E"
+api_key <- "..."
+api_secret_key <- "..."
+access_token <- "..."
+access_token_secret <- "..."
 
 token <- create_token(app = "UnibgTwitter1082586", consumer_key = api_key, 
                       consumer_secret = api_secret_key, access_token = access_token, 
