@@ -50,7 +50,7 @@ timeline %>%
     "skyblue")) + theme_bw()
 ```
 
-![](Ass2_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](Graphs/unnamed-chunk-4-1.png)<!-- -->
 
 #### 2.a Word usage comparison
 
@@ -92,7 +92,7 @@ tidy_tweets %>%
 
     ## Warning: Removed 11628 rows containing missing values (geom_text).
 
-![](Ass2_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](Graphs/unnamed-chunk-5-1.png)<!-- -->
 
 #### 2.a Word usage comparison - with data cleaned
 
@@ -135,7 +135,7 @@ tidy_tweets %>%
 
     ## Warning: Removed 6273 rows containing missing values (geom_text).
 
-![](Ass2_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](Graphs/unnamed-chunk-6-1.png)<!-- -->
 
 ## Naval tweets
 
@@ -296,7 +296,7 @@ ggplot(topic, aes(x = k, y = perplexity)) + geom_line(col = "steelblue") +
     theme_bw()
 ```
 
-![](Ass2_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](Graphs/unnamed-chunk-16-1.png)<!-- -->
 
 Different range
 
@@ -346,7 +346,7 @@ ggplot(topic, aes(x = k, y = perplexity)) + geom_line(col = "steelblue") +
     theme_bw()
 ```
 
-![](Ass2_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![](Graphs/unnamed-chunk-20-1.png)<!-- -->
 
 #### 2.e Running the model
 
@@ -439,7 +439,7 @@ top_terms %>%
     theme_bw()
 ```
 
-![](Ass2_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](Graphs/unnamed-chunk-24-1.png)<!-- -->
 
 #### 2.i Word assignment to each topic
 
@@ -614,7 +614,7 @@ doc_ass %>%
   coord_flip()
 ```
 
-![](Ass2_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+![](Graphs/unnamed-chunk-29-1.png)<!-- -->
 
 #### 2.n Topics variation over time
 
@@ -668,7 +668,7 @@ t %>%
     facet_wrap(~topic)
 ```
 
-![](Ass2_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
+![](Graphs/unnamed-chunk-31-1.png)<!-- -->
 
 ``` r
 t %>% filter(topic == 21) %>% arrange(desc(n))
@@ -713,6 +713,7 @@ t %>% filter(topic == 22) %>% arrange(desc(n))
 #### 2.o Interactive view for topics
 
 ``` r
+#does not work in markdown, needs to be executed in the console.
 dtm <- dtm[slam::row_sums(dtm) > 0, ]
 phi <- as.matrix(posterior(m)$terms)
 theta <- as.matrix(posterior(m)$topics)
